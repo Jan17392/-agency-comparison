@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327192529) do
+ActiveRecord::Schema.define(version: 20170327192922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20170327192529) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.index ["user_id"], name: "index_agencies_on_user_id", using: :btree
+  end
+
+  create_table "agency_competencies", force: :cascade do |t|
+    t.integer  "competency_id"
+    t.integer  "agency_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["agency_id"], name: "index_agency_competencies_on_agency_id", using: :btree
+    t.index ["competency_id"], name: "index_agency_competencies_on_competency_id", using: :btree
   end
 
   create_table "competencies", force: :cascade do |t|
@@ -60,4 +69,6 @@ ActiveRecord::Schema.define(version: 20170327192529) do
   end
 
   add_foreign_key "agencies", "users"
+  add_foreign_key "agency_competencies", "agencies"
+  add_foreign_key "agency_competencies", "competencies"
 end
