@@ -18,6 +18,9 @@ gem 'autoprefixer-rails'
 
 gem 'devise'
 
+# Forestadmin Gem
+gem 'forest_liana'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
