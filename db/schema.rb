@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327192922) do
+ActiveRecord::Schema.define(version: 20170327193330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,42 @@ ActiveRecord::Schema.define(version: 20170327192922) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "employees", force: :cascade do |t|
+    t.integer  "agency_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "twitter_profile"
+    t.string   "facebook_profile"
+    t.string   "linkedin_profile"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["agency_id"], name: "index_employees_on_agency_id", using: :btree
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.integer  "agency_id"
+    t.string   "location_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["agency_id"], name: "index_locations_on_agency_id", using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.decimal  "rating"
+    t.integer  "user_id"
+    t.integer  "agency_id"
+    t.string   "comment"
+    t.integer  "competency_id"
+    t.decimal  "price"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["agency_id"], name: "index_reviews_on_agency_id", using: :btree
+    t.index ["competency_id"], name: "index_reviews_on_competency_id", using: :btree
+    t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -71,4 +107,9 @@ ActiveRecord::Schema.define(version: 20170327192922) do
   add_foreign_key "agencies", "users"
   add_foreign_key "agency_competencies", "agencies"
   add_foreign_key "agency_competencies", "competencies"
+  add_foreign_key "employees", "agencies"
+  add_foreign_key "locations", "agencies"
+  add_foreign_key "reviews", "agencies"
+  add_foreign_key "reviews", "competencies"
+  add_foreign_key "reviews", "users"
 end
