@@ -1,15 +1,5 @@
 Rails.application.routes.draw do
-  get 'agencies/show'
-
-  get 'agencies/index'
-
-  get 'agencies/new'
-
-  get 'agencies/create'
-
-  get 'agencies/update'
-
-  get 'agencies/delete'
+  resources :agencies
 
   mount ForestLiana::Engine => '/forest'
   devise_for :users
