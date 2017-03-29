@@ -11,7 +11,7 @@ $(document).ready(function(){
 
     $('a[href*="#"]').smoothScroll();
 
-    $('a:not([href*="#"])').attr('target', "_blank");
+
 
     var header = $('header');
     var headerHeight = $('header').outerHeight(true);

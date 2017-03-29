@@ -1,12 +1,32 @@
-<h2>Sign up</h2>
-
+<div class="nav-container"> </div>
+<div class="main-container">
+  <div class="imageblock switchable feature-large height-100">
+    <div class="imageblock__content col-md-6 col-sm-4 pos-right">
+      <div class="background-image-holder">
+        <img alt="image" src="<%= asset_path('inner-7.jpg') %>" />
+      </div>
+    </div>
+    <div class="container pos-vertical-center">
+      <div class="row">
+        <div class="col-md-5 col-sm-7">
+          <h2>Create a Stack account</h2>
+          <p class="lead">Get started with a 14 day free trial, No credit card required — cancel at any time.</p>
+          <a class="btn block btn--icon bg--facebook type--uppercase" href="#"> <span class="btn__text">
+            <i class="socicon-facebook"></i>
+            Sign up with Facebook
+          </span> </a>
+          <a class="btn block btn--icon bg--twitter type--uppercase" href="#"> <span class="btn__text">
+            <i class="socicon-twitter"></i>
+            Sign up with Twitter
+          </span> </a>
+          <hr data-title="OR">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+
   </div>
 
   <div class="form-actions">
@@ -15,3 +35,11 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
