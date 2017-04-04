@@ -1,6 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  root to: 'pages#home'
+
+  resources :agencies
+  resources :pages
+
+  get '/contact-us', to: 'pages#contact'
+  get '/', to: 'pages#home'
+
+
+
+
+
+  # I18n - Keep all Routes you add to regular also here
   scope "/:locale" do
     root to: 'pages#home'
 
@@ -8,9 +21,10 @@ Rails.application.routes.draw do
     resources :pages
 
     get '/contact-us', to: 'pages#contact'
+    get '/:locale' => 'pages#home'
   end
 
-  get '/:locale' => 'dashboard#index'
+
 
   mount ForestLiana::Engine => '/forest'
 
