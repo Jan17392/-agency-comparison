@@ -1,12 +1,33 @@
 <%= render 'layouts/shared/header' %>
 <br>
-<div class="main-container">
+<div class="main-container" style="background-color: #FAFAFC">
+
+<div>
+  <h3 class="col-sm-10 col-sm-offset-1">We found 201 matching agencies for your search</h2>
+</div>
+
+
 <div class="col-sm-3 col-sm-offset-1">
   <div class="boxed boxed--border">
     <h5>Filters</h5>
-    <p>
-      Build a beautifully performant site with Stack's vast collection of modular elements.
-    </p>
+<%= form_for_filterrific @filterrific do |f| %>
+  <div>
+    Search
+    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
+    <%= f.text_field(
+      :search_query,
+      class: 'filterrific-periodically-observed'
+    ) %>
+  </div>
+  <div>
+    <%= link_to(
+      'Reset filters',
+      reset_filterrific_url,
+    ) %>
+  </div>
+  <%# add an automated spinner to your form when the list is refreshed %>
+  <%= render_filterrific_spinner %>
+<% end %>
     <a class="btn btn--primary" href="#">
       <span class="btn__text">
         Update
@@ -14,43 +35,24 @@
     </a>
   </div>
 </div>
+
 <div class="col-sm-7">
-<% @agencies.each do |agency| %>
-                                  <div class="boxed boxed--border">
-                                      <div class="card__body">
-                                          <h4><%= agency.name %></h4>
-                                          <span class="type--fade">
-                                            Digital Marketing Agency
-                                          </span>
-                                          <p> We are crap, but charge a shitload of money </p>
-                                      </div>
-                                      <div class="card__bottom text-right">
-                                        <%= link_to("Details", agency_path(agency)) %>
-                                      </div>
-                                  </div>
+  <div class="boxed boxed--border">
+    <p>Tired of searching the right Agency? Let us do the job!</p>
+    <div class="card-button">
+      <%= link_to("Details", '/') %>
+    </div>
+  </div>
 
+  <%= render(
+    partial: 'layouts/shared/list',
+    locals: { agencies: @agencies }
+  ) %>
 
-                                  <div class="boxed boxed--border">
-                                      <div class="card__body">
-                                          <h4><%= agency.name %></h4> <span class="type--fade">Video Tutorial Series</span>
-                                          <p> Construct mockups or production-ready pages in-browser with Variant Page Builder </p>
-                                      </div>
-                                      <div class="card__bottom text-right">
-                                        <%= link_to("Details", agency_path(agency)) %>
-                                      </div>
-                                  </div>
-
-                                                                    <div class="boxed boxed--border">
-                                      <div class="card__body">
-                                          <h4><%= agency.name %></h4> <span class="type--fade">Video Tutorial Series</span>
-                                          <p> Construct mockups or production-ready pages in-browser with Variant Page Builder </p>
-                                      </div>
-                                      <div class="card__bottom text-right">
-                                        <%= link_to("Details", agency_path(agency)) %>
-                                      </div>
-                                  </div>
-
-<% end %>
 </div>
-<%= render 'layouts/shared/footer' %>
+
+
+
+<div class="col-sm-7">
+  <%= render 'layouts/shared/footer' %>
 </div>

@@ -1,6 +1,15 @@
 class AgenciesController < ApplicationController
   def index
-    @agencies = Agency.all
+      @filterrific = initialize_filterrific(
+        Agency,
+        params[:filterrific]
+      ) or return
+      @agencies = @filterrific.find.page(params[:page])
+
+      respond_to do |format|
+        format.html
+        format.js
+      end
   end
 
   def show

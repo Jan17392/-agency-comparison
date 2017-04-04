@@ -6,6 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+50.times do
+  Agency.create!(
+    name: Faker::Company.name,
+    number_of_staff: Faker::Number.number(3),
+    annual_revenue: Faker::Number.number(7),
+    hourly_rate: Faker::Number.number(3),
+    slogan: Faker::Company.catch_phrase,
+    description: Faker::Company.catch_phrase,
+    min_project_size: Faker::Number.number(4),
+    website: Faker::Internet.url,
+    phone: Faker::PhoneNumber.phone_number,
+    # behance_profile: "",
+    # facebook_profile: "",
+    # twitter_profile: "",
+    # linkedin_profile: ,
+    user_id: 1,
+    email: Faker::Internet.email
+    )
+end
+
 competencies = [
   "3D Video",
   "3D Art",
@@ -19,7 +39,7 @@ competencies = [
   "App Design",
   "Articles",
   "Banner Ad Copy",
-  "Banner Advertising"
+  "Banner Advertising",
   "Banner Advertising",
   "Billboard adverts",
   "Blog",
@@ -373,5 +393,5 @@ competencies = [
   "YouTube",
   "Google Shopping",
   "Retargeting",
-  "Dynamic Retargeting"]
+  "Dynamic Retargeting"
 ]

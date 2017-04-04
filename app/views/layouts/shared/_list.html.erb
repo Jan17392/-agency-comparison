@@ -1,0 +1,25 @@
+<div id="filterrific_results">
+
+  <% agencies.each do |agency| %>
+
+    <div class="card boxed boxed--border">
+
+      <div class="card-description">
+        <h4><%= agency.name %></h4>
+        <span class="type--fade"> <%= agency.slogan %> </span>
+        <p> <%= agency.description %> </p>
+      </div>
+
+      <p class="card-user">9.8</p>
+
+      <div class="card-button">
+        <%= link_to("Details", agency_path(agency)) %>
+      </div>
+
+    </div>
+    <%= render 'layouts/shared/tabs' %>
+
+  <% end %>
+</div>
+
+<%= will_paginate agencies %>

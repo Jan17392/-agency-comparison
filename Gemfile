@@ -18,8 +18,15 @@ gem 'autoprefixer-rails'
 
 gem 'devise'
 
+gem 'faker'
+
 # Forestadmin Gem
 gem 'forest_liana'
+
+# Filter for Search and Pagination
+gem 'filterrific'
+gem 'will_paginate', '~> 3.1.0'
+
 
 group :development, :test do
   gem 'binding_of_caller'
