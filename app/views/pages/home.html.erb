@@ -1,227 +1,205 @@
 <%= render 'layouts/shared/header' %>
 
 <div class="main-container">
-    <section class="cover imagebg height-70 text-center" data-overlay="4">
-        <div class="background-image-holder"><img alt="background" src="img/agency-5.jpg"></div>
-        <div class="container pos-vertical-center">
-            <div class="row">
-                <div class="col-sm-10 col-md-8">
-                    <h1>Agency Compare</h1>
-                    <p class="lead"> Choose the right agency for you or request proposals from the best rated agencies - free and simple </p>
-                    <div class="boxed boxed--lg bg--white text-left">
-                        <form class="form--horizontal">
-                            <div class="col-sm-8"> <input type="text" name="search" placeholder="Type search keywords here"> </div>
-                            <%= link_to("Search", agencies_path) %>
-                            <div class="col-sm-4">  </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="cover imagebg height-70 text-center">
-        <div class="container ">
-          <div class="row">
-              <div class="masonry">
-                  <div class="masonry__container masonry--active">
-                      <div class="col-sm-4 masonry__item">
-                          <div class="card card-2 text-center">
-                              <div class="card__top">
-                                  <%= image_tag("blog-1.jpg") %>
-                              </div>
-                              <div class="card__body">
-                                  <h4>Photography 101</h4> <span class="type--fade">Understanding the fundamentals</span>
-                                  <p> Construct mockups or production-ready pages in-browser with Variant Page Builder </p>
-                              </div>
-                              <div class="card__bottom text-center">
-                                  <div class="card__action"> <span class="h6 type--uppercase">Explore</span>
-                                      <a href="#"> <i class="material-icons">flip_to_front</i> </a>
-                                  </div>
-                                  <div class="card__action"> <span class="h6 type--uppercase">Save</span>
-                                      <a href="#"> <i class="material-icons">favorite_border</i> </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm-4 masonry__item">
-                          <div class="card card-2 text-center">
-                              <div class="card__top"> <span class="label">New</span>
-                                  <%= image_tag("blog-1.jpg") %>
-                              </div>
-                              <div class="card__body">
-                                  <h4>Kiln Fired Pottery</h4> <span class="type--fade">Video Tutorial Series</span>
-                                  <p> Construct mockups or production-ready pages in-browser with Variant Page Builder </p>
-                              </div>
-                              <div class="card__bottom text-center">
-                                  <div class="card__action"> <span class="h6 type--uppercase">Explore</span>
-                                      <a href="#"> <i class="material-icons">flip_to_front</i> </a>
-                                  </div>
-                                  <div class="card__action"> <span class="h6 type--uppercase">Save</span>
-                                      <a href="#"> <i class="material-icons">favorite_border</i> </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm-4 masonry__item">
-                          <div class="card card-2 text-center">
-                              <div class="card__top"> <span class="label">New</span>
-                                  <%= image_tag("blog-1.jpg") %>
-                              </div>
-                              <div class="card__body">
-                                  <h4>Kiln Fired Pottery</h4> <span class="type--fade">Video Tutorial Series</span>
-                                  <p> Construct mockups or production-ready pages in-browser with Variant Page Builder </p>
-                              </div>
-                              <div class="card__bottom text-center">
-                                  <div class="card__action"> <span class="h6 type--uppercase">Explore</span>
-                                      <a href="#"> <i class="material-icons">flip_to_front</i> </a>
-                                  </div>
-                                  <div class="card__action"> <span class="h6 type--uppercase">Save</span>
-                                      <a href="#"> <i class="material-icons">favorite_border</i> </a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+  <section class="cover imagebg height-70 text-center" data-overlay="4">
+    <div class="background-image-holder">
+     <!--  <img alt="background" src="img/agency-5.jpg"> -->
+      <%= image_tag("agency-5") %>
+    </div>
+    <div class="container pos-vertical-center">
+      <div class="row">
+        <div class="col-sm-10 col-md-8">
+            <h1>Agency Compare</h1>
+            <p class="lead"> Choose the right agency for you or request proposals from the best rated agencies - free and simple </p>
+          <div class="boxed boxed--lg bg--white text-left">
+            <form class="form--horizontal">
+                <div class="col-sm-8"> <input type="text" name="search" placeholder="Type search keywords here"> </div>
+                <%= link_to("Search", agencies_path) %>
+                <div class="col-sm-4">  </div>
+            </form>
           </div>
-        </div>
-    </section>
-    <section class="text-center unpad--bottom switchable cta cta-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-7">
-            <div class="switchable__text">
-                <h2>Reinvent how to find your Agency now!</h2>
-                <p class="lead"> Create the smart, stylish site your business deserves. </p>
-                <a class="btn btn--primary type--uppercase" href="#purchase-template">
-                <span class="btn__text">Purchase Stack Now</span>
-                <span class="label">$17 USD</span> </a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-5">
-            <%= image_tag("hero-1", class: "block") %>
-<!--             <img alt="Image" class="block" src="images/avatar-large-1.png">
- -->          </div>
         </div>
       </div>
-    </section>
-    <section class="switchable feature-large">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-sm-6 switchable__text">
-                    <h2>Perfect for bootstrapped startups</h2>
-                    <p class="lead"> Launching an attractive and scalable website quickly and affordably is important for modern startups — Stack offers massive value without looking 'bargain-bin'. </p>
-                    <a class="btn btn--primary type--uppercase" href="#"> <span class="btn__text">
-                Explore Detail
-            </span> </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-md-pull-1 col-xs-12">
-                    <div class="boxed boxed--lg boxed--border box-shadow-wide">
-                        <div class="slider" data-paging="true">
-                            <ul class="slides">
-                                <li class="col-xs-12">
-                                    <div class="feature feature-3 text-center"> <i class="icon icon--lg icon-Mail-3 color--primary"></i>
-                                        <h4>Mailer Integrations</h4>
-                                        <p> Stack comes with integration for Mail Chimp and Campaign Monitor forms - ideal for modern marketing campaigns </p> <a href="#">
-                                Learn More
-                            </a> </div>
-                                </li>
-                                <li class="col-xs-12">
-                                    <div class="feature feature-3 text-center"> <i class="icon icon--lg icon-Air-Balloon color--primary"></i>
-                                        <h4>Diverse Icons</h4>
-                                        <p> Including the premium Icons Mind icon kit, Stack features a highly diverse set of icons suitable for all purposes. </p> <a href="#">
-                                Learn More
-                            </a> </div>
-                                </li>
-                                <li class="col-xs-12">
-                                    <div class="feature feature-3 text-center"> <i class="icon icon--lg icon-Bacteria color--primary"></i>
-                                        <h4>Modular Design</h4>
-                                        <p> Combine blocks from a range of categories to build pages that are rich in visual style and interactivity </p> <a href="#">
-                                Learn More
-                            </a> </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 padding-card">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/240/175/?random');">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
             </div>
+            <%= image_tag("avatar-round-2", class: "card-user avatar") %>
+            <a class="card-link" href="#" ></a>
+          </div>
         </div>
-    </section>
-    <section class="space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1">
-        <div class="container">
-            <div class="row">
-                <div class="cta cta--horizontal text-center-xs">
-                    <div class="col-sm-4">
-                        <h4>Let's get you started</h4>
-                    </div>
-                    <div class="col-sm-5">
-                        <p class="lead"> Find your preferred agency in five minutes!</p>
-                    </div>
-                    <div class="col-sm-3 text-right text-center-xs">
-                        <a class="btn btn--primary type--uppercase" href="#"> <span class="btn__text">
-                    Start now</span> </a>
-                    </div>
-                </div>
+        <div class="col-xs-12 col-sm-4 padding-card">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/240/175/?random');">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
             </div>
+            <%= image_tag("avatar-round-3", class: "card-user avatar") %>
+            <a class="card-link" href="#" ></a>
+          </div>
         </div>
-    </section>
-    <section class="imagebg" data-overlay="4">
-        <div class="background-image-holder">
-<!--           <img alt="background" src="img/hero-1.jpg">
- -->          <%= image_tag("hero-1") %>
+        <div class="col-xs-12 col-sm-4 padding-card">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/240/175/?random');">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+            <%= image_tag("avatar-round-1", class: "card-user avatar") %>
+            <a class="card-link" href="#" ></a>
+          </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="slider slider--inline-arrows" data-arrows="true">
-                <ul class="slides">
-                  <li>
-                    <div class="row">
-                      <div class="testimonial">
-                        <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
-                          <img class="testimonial__image" alt="Image" src="img/avatar-round-1.png">
-                        </div>
-                        <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
-                          <span class="h3">“We’ve been using Stack to prototype designs quickly and efficiently. Needless to say we’re hugely impressed by the style and value.”</span>
-                          <h5>Maguerite Holland</h5>
-                          <span>Interface Designer — Yoke</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="testimonial">
-                        <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
-                          <img class="testimonial__image" alt="Image" src="img/avatar-round-4.png">
-                        </div>
-                        <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
-                          <span class="h3">“I've been using Medium Rare's templates for a couple of years now and Stack is without a doubt their best work yet. It's fast, performant and absolutely stunning.”
-                          </span>
-                          <h5>Lucas Nguyen</h5> <span>Freelance Designer</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="testimonial">
-                        <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
-                          <img class="testimonial__image" alt="Image" src="img/avatar-round-3.png">
-                        </div>
-                        <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
-                          <span class="h3">“Variant has been a massive plus for my workflow — I can now get live mockups out in a matter of hours, my clients really love it.”</span>
-                          <h5>Rob Vasquez</h5>
-                          <span>Interface Designer — Yoke</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+      </div>
+    </div>
+  </section>
+  <section class="text-center unpad--bottom switchable cta cta-3 space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-7">
+          <div class="switchable__text">
+              <h2>Reinvent how to find your Agency now!</h2>
+              <p class="lead"> Create the smart, stylish site your business deserves. </p>
+              <a class="btn btn--primary type--uppercase" href="#purchase-template">
+              <span class="btn__text">Purchase Stack Now</span>
+              <span class="label">$17 USD</span> </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 padding">
+          <%= image_tag("hero-1", class: "block") %>
+          <!--  <img alt="Image" class="block" src="images/avatar-large-1.png">  -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="switchable feature-large">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-sm-6 switchable__text">
+          <h2>Perfect for bootstrapped startups</h2>
+          <p class="lead">Launching an attractive and scalable website quickly and affordably is important for modern startups — Stack offers massive value without looking 'bargain-bin'.</p>
+          <a class="btn btn--primary type--uppercase" href="#"><span class="btn__text">Explore Detail</span>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-md-pull-1 col-xs-12">
+          <div class="boxed boxed--lg boxed--border box-shadow-wide">
+            <div class="slider" data-paging="true">
+              <ul class="slides">
+                <li class="col-xs-12">
+                  <div class="feature feature-3 text-center">
+                    <i class="icon icon--lg icon-Mail-3 color--primary"></i>
+                    <h4>Mailer Integrations</h4>
+                    <p> Stack comes with integration for Mail Chimp and Campaign Monitor forms - ideal for modern marketing campaigns</p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </li>
+                <li class="col-xs-12">
+                  <div class="feature feature-3 text-center"> <i class="icon icon--lg icon-Air-Balloon color--primary"></i>
+                    <h4>Diverse Icons</h4>
+                    <p>Including the premium Icons Mind icon kit, Stack features a highly diverse set of icons suitable for all purposes.</p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </li>
+                <li class="col-xs-12">
+                  <div class="feature feature-3 text-center"> <i class="icon icon--lg icon-Bacteria color--primary"></i>
+                      <h4>Modular Design</h4>
+                      <p> Combine blocks from a range of categories to build pages that are rich in visual style and interactivity</p>
+                      <a href="#">Learn More</a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+  <section class="space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1">
+    <div class="container">
+      <div class="row">
+        <div class="cta cta--horizontal text-center-xs">
+          <div class="col-sm-4">
+              <h4>Let's get you started</h4>
+          </div>
+          <div class="col-sm-5">
+              <p class="lead"> Find your preferred agency in five minutes!</p>
+          </div>
+          <div class="col-sm-3 text-right text-center-xs">
+              <a class="btn btn--primary type--uppercase" href="#"> <span class="btn__text">
+          Start now</span> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="imagebg" data-overlay="4">
+    <div class="background-image-holder">
+      <!--  <img alt="background" src="img/hero-1.jpg">  -->
+      <%= image_tag("hero-1") %>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="slider slider--inline-arrows" data-arrows="true">
+            <ul class="slides">
+              <li>
+                <div class="row">
+                  <div class="testimonial">
+                    <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
+                      <!-- <img class="testimonial__image" alt="Image" src="img/avatar-round-1.png"> -->
+                      <%= image_tag("avatar-round-1", class: "testimonial__image") %>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
+                      <span class="h3">“We’ve been using Stack to prototype designs quickly and efficiently. Needless to say we’re hugely impressed by the style and value.”</span>
+                      <h5>Maguerite Holland</h5>
+                      <span>Interface Designer — Yoke</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="testimonial">
+                    <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
+                     <!--  <img class="testimonial__image" alt="Image" src="img/avatar-round-4.png"> -->
+                      <%= image_tag("avatar-round-4", class: "testimonial__image") %>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
+                      <span class="h3">“I've been using Medium Rare's templates for a couple of years now and Stack is without a doubt their best work yet. It's fast, performant and absolutely stunning.”
+                      </span>
+                      <h5>Lucas Nguyen</h5> <span>Freelance Designer</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="testimonial">
+                    <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-6 text-center">
+                      <!-- <img class="testimonial__image" alt="Image" src="img/avatar-round-3.png"> -->
+                      <%= image_tag("avatar-round-3", class: "testimonial__image") %>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12">
+                      <span class="h3">“Variant has been a massive plus for my workflow — I can now get live mockups out in a matter of hours, my clients really love it.”</span>
+                      <h5>Rob Vasquez</h5>
+                      <span>Interface Designer — Yoke</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 <%= render 'layouts/shared/footer' %>
 </div>
