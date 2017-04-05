@@ -26,7 +26,7 @@ gem 'forest_liana'
 # Filter for Search and Pagination
 gem 'filterrific'
 gem 'will_paginate', '~> 3.1.0'
-
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'binding_of_caller'

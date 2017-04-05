@@ -22,5 +22,5 @@
 en:
   layouts:
     shared:
-      footer:
+      header:
         title: "List of Restaurants"

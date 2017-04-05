@@ -13,7 +13,7 @@ class AgenciesController < ApplicationController
   end
 
   def show
-    @agency = Agency.find(params[:id])
+    @agency = Agency.where(name: params[:name]).first
   end
 
   def new
