@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :agencies
+  resources :agencies, param: :name
   resources :pages
 
   get '/contact-us', to: 'pages#contact'
